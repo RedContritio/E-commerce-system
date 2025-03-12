@@ -24,4 +24,7 @@ brew install podman
 brew services start podman
 
 brew install podman-compose
+
+# podman need cgroup2
+# https://github.com/spurin/wsl-cgroupsv2
 ```
