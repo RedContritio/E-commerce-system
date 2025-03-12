@@ -22,14 +22,12 @@ func initDB() *gorm.DB {
 func main() {
 	// 初始化数据库
 	db := initDB()
-
+	
 	db.AutoMigrate(&models.User{})
 	
 	userService := services.UserService{DB: db}
 	userHandler := handlers.UserHandler{UserService: &userService}
-
-
-
+	
 	// 初始化 Gin
 	r := gin.Default()
 
