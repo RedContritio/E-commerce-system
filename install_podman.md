@@ -23,6 +23,12 @@ test -r ~/.zprofile && echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\"" >>
 brew install podman
 brew services start podman
 
+## Ensure podman have registry
+## /etc/containers/registries.conf
+##
+## unqualified-search-registries = ["docker.io"]         # official
+## unqualified-search-registries = ["docker.tbedu.top"]  # work in cn
+
 brew install podman-compose
 
 # podman need cgroup2
